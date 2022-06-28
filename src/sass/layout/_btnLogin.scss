@@ -1,0 +1,105 @@
+// ========================
+//  кнопка регистрації
+.login-container {
+  position: absolute;
+  right: 30;
+  top: 110px;
+  @media screen and (max-width: 767px) {
+    top: 40px;
+  }
+}
+.sign-up-btn {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  color: getColor('white-color');
+  background-color: transparent;
+  text-transform: uppercase;
+  border: 1px solid getColor('pin-color');
+  border-radius: 7px;
+  width: 65px;
+  height: 30px;
+  margin-right: 10px;
+
+  &:focus,
+  &:hover {
+    background-color: getColor('pin-color');
+  }
+}
+
+.sign-in-btn {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  color: getColor('white-color');
+  background-color: transparent;
+  text-transform: uppercase;
+  border: 1px solid getColor('pin-color');
+  border-radius: 7px;
+  width: 65px;
+  height: 30px;
+
+  &:focus,
+  &:hover {
+    background-color: getColor('pin-color');
+  }
+}
+
+.boxLoginLogout {
+  position: absolute;
+  right: 25px;
+  top: 110px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  padding-bottom: 50px;
+  @media screen and (max-width: 767px) {
+    top: 40px;
+  }
+}
+.btnLoginLogout {
+  margin-right: 1px;
+  margin-left: 5px;
+  color: getColor('white-color');
+
+  text-transform: uppercase;
+  border: 1px solid getColor('pin-color');
+  border-radius: 7px;
+  width: 65px;
+  height: 30px;
+  background-color: transparent;
+  &:focus,
+  &:hover {
+    background-color: getColor('pin-color');
+  }
+}
+
+.logOutName {
+  padding-right: 10px;
+  color: getColor('white-color');
+}
+
+.signUp__btnClose,
+.signIn__btnClose {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 40px;
+  text-align: center;
+
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #000000;
+
+  &:hover {
+    color: rgb(255, 106, 0);
+  }
+}

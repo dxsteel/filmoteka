@@ -1,0 +1,224 @@
+body.modal-open {
+  overflow: hidden;
+}
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  z-index: 6;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: initial;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  &.is-hidden > .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+  }
+}
+
+// Modal
+
+.modal_film {
+  min-width: 280px;
+  height: 100vh;
+  background-color: getColor('white-color');
+  border-radius: 4px;
+  position: relative;
+
+  @media screen and (min-width: 320px) {
+    width: 280px;
+    height: 100vh;
+    padding: 40px 0px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 704px;
+    height: 70vh;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 814px;
+    height: auto;
+  }
+}
+
+.modal_film-info {
+  background-color: getColor('white-color');
+  border: none;
+  padding: 0 16px;
+}
+
+.about_film-img {
+  @media screen and (min-width: 320px) {
+    width: auto;
+  }
+  @media screen and (min-width: 768px) {
+    width: 264px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: auto;
+    padding-right: 16px;
+  }
+}
+
+.about_film-card {
+  background-color: getColor('white-color');
+  margin-top: 18px;
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-top: 10px;
+  }
+  @media screen and (min-width: 1024px) {
+    margin-top: 0px;
+  }
+}
+
+.about_film-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.about_film-name {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.17;
+  text-align: start;
+  color: #000000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0;
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+
+.about_film-text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #8c8c8c;
+}
+
+.about_film-date {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #000000;
+}
+
+.about_film-pretitle {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  text-align: start;
+  text-transform: uppercase;
+  color: #000000;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.modal_film__button--close {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 40px;
+  text-align: center;
+
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #000000;
+
+  &:hover {
+    color: rgb(255, 106, 0);
+  }
+}
+
+.about_film_vote {
+  height: 36px;
+  width: 16px;
+
+  background: rgb(255, 106, 0);
+  border-radius: 5px;
+  padding: 1px 10px;
+}
+.about_film-overview {
+  position: relative;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+  text-align: start;
+  color: #000000;
+}
+
+.btn {
+  position: relative;
+  vertical-align: middle;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 133%;
+  color: #000000;
+  margin-top: 20px;
+  width: 110px;
+  height: 44px;
+  text-transform: uppercase;
+
+  border: 1px solid #000000;
+  border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    background: #ff6b01;
+  }
+
+  &:last-child {
+    margin-left: 20px;
+  }
+}
+.about_item_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn.disabled {
+  background-color: #cdcdcd;
+  color: #8c8c8c;
+  pointer-events: none;
+}
